@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>character counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="fir">
+        <h2>Real-time character counter</h2><br>
+        <input type="text" placeholder="Please write your text here...." oninput="cng()" id="inp" maxlength="50"><br>
+        <div class="upod">
+        <p class="para">Total character <p class="tc"> 0</p><p>
+        <p class="para">Remaining <p class="rem"> 50</p></p>
+    </div>
+    </div>
+    <script>
+     function cng(){
+         let tot=document.getElementById("inp").value;
+         let tc=document.querySelector(".tc")
+         let rem=document.querySelector(".rem")
+         if(tot.length<=50){
+         tc.innerHTML=tot.length;
+         rem.innerHTML=50-tot.length;
+         }
+         if(tot.length50)
+         alert("Limit reached")
+         
+     }
+    </script>
+</body>
+</html>
